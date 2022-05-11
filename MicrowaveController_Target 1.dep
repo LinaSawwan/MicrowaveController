@@ -1,4 +1,4 @@
 Dependencies for Project 'MicrowaveController', Target 'Target 1': (DO NOT MODIFY !)
 F (.\startup_TM4C123.s)(0x627C2CA8)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (.\Controller.c)(0x627C32EE)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\controller.o --omf_browse .\controller.crf --depend .\controller.d)
+F (.\Controller.c)(0x627C3A7F)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\controller.o --omf_browse .\controller.crf --depend .\controller.d)
 I (tm4c123gh6pm.h)(0x627C2CA8)
