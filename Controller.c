@@ -1,7 +1,8 @@
 #include "tm4c123gh6pm.h"
+#include "led.c"
 
 int main(){
-	int i =0;
+	RGBLED_Init();
 	
 	
 }
