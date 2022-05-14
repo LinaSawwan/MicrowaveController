@@ -3,12 +3,11 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\Andrew\Desktop\Embedded Project\MicrowaveController\MicrowaveController.uvproj
+C:\Users\EES\OneDrive\Desktop\project Embedded\MicrowaveController\MicrowaveController.uvproj
 Project File Date:  05/14/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
-assembling startup_TM4C123.s...
 compiling Controller.c...
 led.c(2): error:  #5: cannot open source input file " stdint ": No such file or directory
   #include < stdint >
@@ -73,6 +72,7 @@ button.c(37): error:  #20: identifier "uint32_t" is undefined
 button.c(42): error:  #20: identifier "uint32_t" is undefined
         int n = ((GPIO_PORTA_DATA_R & (1<<1))>>1);
 button.c: 0 warnings, 21 errors
+compiling lcd.c...
 ".\MicrowaveController.axf" - 28 Error(s), 0 Warning(s).
 Target not created
 </pre>
