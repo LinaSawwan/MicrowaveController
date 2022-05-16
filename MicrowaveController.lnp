@@ -1,6 +1,11 @@
 --cpu Cortex-M4.fp
 ".\startup_tm4c123.o"
 ".\controller.o"
---ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+".\led.o"
+".\delay.o"
+".\button.o"
+".\lcd.o"
+".\keypad.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\MicrowaveController.map" -o .\MicrowaveController.axf
