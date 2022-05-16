@@ -1,5 +1,9 @@
 #include "led.h "
+<<<<<<< HEAD
 #include <stdint.h>
+=======
+
+>>>>>>> 6c902248c0df214cb4daa0ee892ff50c1faec12a
 
 void RGBLED_Init(){
 SYSCTL_RCGCGPIO_R |= 0x20;
