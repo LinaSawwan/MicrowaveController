@@ -1,5 +1,5 @@
 #include "keypad.h"																		
-											
+#include "buzzer.h"											
 
 /* Array of 4x4 to define characters which will be printe on specific key pressed */
 unsigned  char symbol[RowsSize][ColsSize] =    {{ '1', '2',  '3', 'A'},      
@@ -38,6 +38,11 @@ for( i = 0; i < 4; i++)           								//columns traverse
       for( j = 0; j < 4; j++)                     //rows traverse
       {
         if((GPIO_PORTD_DATA_R &0x0F )& (1U << j)){
+					  Buzzer_ON () ;
+						delay_ms(20);
+						Buzzer_OFF () ;
+						GPIO_PORTA_DATA_R &= (~0xF0);
+						GPIO_PORTD_DATA_R &= (~0x0F);
 						return symbol[j][i];
 				}
           
