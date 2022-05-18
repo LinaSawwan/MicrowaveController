@@ -6,16 +6,17 @@ void LCD_cmd(unsigned char cmd){
 	GPIO_PORTE_DATA_R=(LOW<<1)|(LOW<<2)|(HIGH<<3);
 	delay_ms(1);
 	GPIO_PORTE_DATA_R=(LOW<<1)|(LOW<<2)|(LOW<<3);
-	delay_ms(50);
+	delay_ms(2);
 }
 
 void LCD_char(unsigned char data){
+		
 		GPIO_PORTB_DATA_R=data;
 
 	GPIO_PORTE_DATA_R=(HIGH<<1)|(LOW<<2)|(HIGH<<3);
 	delay_ms(1);
 	GPIO_PORTE_DATA_R=(HIGH<<1)|(LOW<<2)|(LOW<<3);
-	delay_ms(50);
+	delay_ms(2);
 
 	return;
 }
@@ -66,7 +67,9 @@ void LCD_Init(){
 
 	LCD_cmd(Home);
 	delay_ms(2);
-
+	
+	LCD_cmd(cursorOff);
+	delay_ms(2);
 }
 
 void LCD_write_string(char  *s)
@@ -77,7 +80,7 @@ void LCD_write_string(char  *s)
 		LCD_char(s[i]);
 		i++;
 	}
-	delay_ms(100);
+	delay_us(1);
 
 	return;
 }
@@ -92,13 +95,14 @@ void LCD_goto_position(unsigned char  x,unsigned char  y)
 { // goes to position (x,y) on the display
 	unsigned char  line_no[]={0x80,0xC0};
 	LCD_cmd(line_no[y-1] + x - 1);
-	delay_ms(50);
+	delay_ms(2);
 }
 
 void LCD_VCLRScreen(){
 	LCD_cmd(Clear);
-	delay_ms(10);
+	//delay_ms();
 }
+
 
 
 
