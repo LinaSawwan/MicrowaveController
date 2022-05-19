@@ -2,7 +2,7 @@
 .\controller.o: tm4c123gh6pm.h
 .\controller.o: led.h
 .\controller.o: buzzer.h
-.\controller.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\controller.o: D:\ARM\ARMCC\bin\..\include\stdint.h
 .\controller.o: lcd.h
 .\controller.o: delay.h
 .\controller.o: delay.h
