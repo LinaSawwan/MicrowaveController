@@ -20,3 +20,7 @@ GPIO_PORTA_DATA_R |= 0x08 ;
 void Buzzer_OFF (){
 GPIO_PORTA_DATA_R &= ~0x08 ; 
 }
+
+void Buzzer_TOGGLE (){
+GPIO_PORTA_DATA_R ^= 0x08 ; 
+}

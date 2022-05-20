@@ -1,0 +1,13 @@
+.\main.o: main.c
+.\main.o: led.h
+.\main.o: tm4c123gh6pm.h
+.\main.o: button.h
+.\main.o: buzzer.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\main.o: lcd.h
+.\main.o: delay.h
+.\main.o: keypad.h
+.\main.o: delay.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdio.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h

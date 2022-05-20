@@ -38,9 +38,9 @@ for( i = 0; i < 4; i++)           								//columns traverse
       for( j = 0; j < 4; j++)                     //rows traverse
       {
         if((GPIO_PORTD_DATA_R &0x0F )& (1U << j)){
-					  Buzzer_ON () ;
+					  Buzzer_ON ();
 						delay_ms(20);
-						Buzzer_OFF () ;
+						Buzzer_OFF ();
 						GPIO_PORTA_DATA_R &= (~0xF0);
 						GPIO_PORTD_DATA_R &= (~0x0F);
 						return symbol[j][i];
