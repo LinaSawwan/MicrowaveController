@@ -31,6 +31,13 @@ bool Is_Number(unsigned char chr){
 		return false;
 	else return true;
 }
+void pause (){                      //pause state
+	while((SW1_Read() == 1)&&(SW2_Read() == 1)){
+										RGB_TOGGLE();
+										delay_s(1);
+										
+	}
+}
 
 void EnterTime(){
 	unsigned char nb='0';
