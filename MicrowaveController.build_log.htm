@@ -8,32 +8,19 @@ Project File Date:  05/21/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling led.c...
-compiling delay.c...
-delay.c(32): warning:  #1-D: last line of file ends without a newline
-  }
-delay.c: 1 warning, 0 errors
-compiling button.c...
-compiling lcd.c...
-lcd.c(104): warning:  #1-D: last line of file ends without a newline
-  }
-lcd.c: 1 warning, 0 errors
-compiling buzzer.c...
-buzzer.c(26): warning:  #1-D: last line of file ends without a newline
-  }
-buzzer.c: 1 warning, 0 errors
-compiling keypad.c...
 compiling main.c...
-main.c(71): warning:  #223-D: function "Error_msg" declared implicitly
+main.c(24): warning:  #1295-D: Deprecated declaration EnterTime - give arg types
+  void EnterTime();
+main.c(163): warning:  #223-D: function "Error_msg" declared implicitly
                                         Error_msg();
-main.c(86): warning:  #223-D: function "Error_msg" declared implicitly
+main.c(178): warning:  #223-D: function "Error_msg" declared implicitly
                         Error_msg();
-main.c: 2 warnings, 0 errors
+main.c: 3 warnings, 0 errors
 linking...
 .\MicrowaveController.axf: Error: L6218E: Undefined symbol Error_msg (referred from main.o).
 Not enough information to list image symbols.
 Finished: 1 information, 0 warning and 1 error messages.
-".\MicrowaveController.axf" - 1 Error(s), 5 Warning(s).
+".\MicrowaveController.axf" - 1 Error(s), 3 Warning(s).
 Target not created
 </pre>
 </body>
