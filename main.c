@@ -26,6 +26,12 @@ void SysInit(){
 	Buzzer_VInit ();
 }
 
+bool Is_Number(unsigned char chr){
+	if( chr<48 | chr>57)
+		return false;
+	else return true;
+}
+
 int main(){
 	
 	SysInit();
