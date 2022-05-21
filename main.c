@@ -32,6 +32,57 @@ bool Is_Number(unsigned char chr){
 	else return true;
 }
 
+void EnterTime(){
+	unsigned char nb='0';
+	char display[5]={'0','0',':','0','0'};
+	number_of_seconds = 0;
+  LCD_VCLRScreen();
+	LCD_write_string (display);
+	
+	while(SW2_Read()==1){
+		if (SW1_Read() == 0){
+			display[0]='0';
+			display[1]='0';
+			display[3]='0';
+			display[4]='0';
+			LCD_VCLRScreen();
+			LCD_write_string (display);
+			}
+		else{
+			nb = keypad_getkey();
+			if (nb!=0xFF){
+				if(Is_Number(nb)){
+					display[0]=display[1];
+					display[1]=display[3];
+					display[3]=display[4];
+					display[4]=nb;
+					LCD_VCLRScreen();
+					LCD_write_string (display);
+					delay_ms(500);
+				}
+				else{
+					Error_msg();
+					display[0]='0';
+					display[1]='0';
+					display[3]='0';
+					display[4]='0';
+					LCD_write_string (display);
+				}	
+			}
+		}
+		}
+	  LCD_VCLRScreen();
+		char min[] = {display[0],display[1]};
+		char sec[] = {display[3],display[4]};
+    number_of_seconds = atoi(sec) + (60) * atoi(min);
+		if ((atoi(sec)>59)||(atoi(min)>29)){
+			Error_msg();
+			EnterTime();
+		}
+    
+}
+
+
 int main(){
 	
 	SysInit();

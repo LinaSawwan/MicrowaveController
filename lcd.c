@@ -102,9 +102,3 @@ void LCD_VCLRScreen(){
 	LCD_cmd(Clear);
 	//delay_ms();
 }
-
-
-
-
-
-
