@@ -177,9 +177,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000000
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000013cc, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001494, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x000013a8, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00001470, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -237,35 +237,35 @@ Memory Map of the image
     0x0000065c   0x000001f0   Code   RO           59    .text               lcd.o
     0x0000084c   0x000000c4   Code   RO           77    .text               buzzer.o
     0x00000910   0x00000134   Code   RO           92    .text               keypad.o
-    0x00000a44   0x000003c8   Code   RO          110    .text               main.o
-    0x00000e0c   0x00000028   Code   RO          145    .text               c_w.l(noretval__2sprintf.o)
-    0x00000e34   0x00000068   Code   RO          147    .text               c_w.l(__printf.o)
-    0x00000e9c   0x00000078   Code   RO          149    .text               c_w.l(_printf_dec.o)
-    0x00000f14   0x0000001a   Code   RO          173    .text               c_w.l(atoi.o)
-    0x00000f2e   0x00000006   Code   RO          175    .text               c_w.l(heapauxi.o)
-    0x00000f34   0x00000008   Code   RO          183    .text               c_w.l(rt_errno_addr_intlibspace.o)
-    0x00000f3c   0x000000b8   Code   RO          185    .text               c_w.l(_printf_intcommon.o)
-    0x00000ff4   0x00000030   Code   RO          187    .text               c_w.l(_printf_char_common.o)
-    0x00001024   0x0000000a   Code   RO          189    .text               c_w.l(_sputc.o)
-    0x0000102e   0x00000070   Code   RO          192    .text               c_w.l(strtol.o)
-    0x0000109e   0x00000002   PAD
-    0x000010a0   0x00000008   Code   RO          194    .text               c_w.l(libspace.o)
-    0x000010a8   0x00000010   Code   RO          212    .text               c_w.l(rt_ctype_table.o)
-    0x000010b8   0x0000009e   Code   RO          216    .text               c_w.l(_strtoul.o)
-    0x00001156   0x0000004a   Code   RO          218    .text               c_w.l(sys_stackheap_outer.o)
-    0x000011a0   0x00000008   Code   RO          223    .text               c_w.l(rt_locale_intlibspace.o)
-    0x000011a8   0x0000001c   Code   RO          225    .text               c_w.l(_chval.o)
-    0x000011c4   0x0000000c   Code   RO          230    .text               c_w.l(exit.o)
-    0x000011d0   0x00000080   Code   RO          240    .text               c_w.l(strcmpv7m.o)
-    0x00001250   0x0000000c   Code   RO          296    .text               c_w.l(sys_exit.o)
-    0x0000125c   0x00000002   Code   RO          307    .text               c_w.l(use_no_semi.o)
-    0x0000125e   0x00000000   Code   RO          309    .text               c_w.l(indicate_semi.o)
-    0x0000125e   0x00000002   PAD
-    0x00001260   0x0000002c   Code   RO          228    locale$$code        c_w.l(lc_ctype_c.o)
-    0x0000128c   0x0000000a   Code   RO          294    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x00001296   0x00000002   PAD
-    0x00001298   0x00000000   Data   RO          361    Region$$Table       anon$$obj.o
-    0x00001298   0x00000110   Data   RO          227    locale$$data        c_w.l(lc_ctype_c.o)
+    0x00000a44   0x00000490   Code   RO          110    .text               main.o
+    0x00000ed4   0x00000028   Code   RO          145    .text               c_w.l(noretval__2sprintf.o)
+    0x00000efc   0x00000068   Code   RO          147    .text               c_w.l(__printf.o)
+    0x00000f64   0x00000078   Code   RO          149    .text               c_w.l(_printf_dec.o)
+    0x00000fdc   0x0000001a   Code   RO          173    .text               c_w.l(atoi.o)
+    0x00000ff6   0x00000006   Code   RO          175    .text               c_w.l(heapauxi.o)
+    0x00000ffc   0x00000008   Code   RO          183    .text               c_w.l(rt_errno_addr_intlibspace.o)
+    0x00001004   0x000000b8   Code   RO          185    .text               c_w.l(_printf_intcommon.o)
+    0x000010bc   0x00000030   Code   RO          187    .text               c_w.l(_printf_char_common.o)
+    0x000010ec   0x0000000a   Code   RO          189    .text               c_w.l(_sputc.o)
+    0x000010f6   0x00000070   Code   RO          192    .text               c_w.l(strtol.o)
+    0x00001166   0x00000002   PAD
+    0x00001168   0x00000008   Code   RO          194    .text               c_w.l(libspace.o)
+    0x00001170   0x00000010   Code   RO          212    .text               c_w.l(rt_ctype_table.o)
+    0x00001180   0x0000009e   Code   RO          216    .text               c_w.l(_strtoul.o)
+    0x0000121e   0x0000004a   Code   RO          218    .text               c_w.l(sys_stackheap_outer.o)
+    0x00001268   0x00000008   Code   RO          223    .text               c_w.l(rt_locale_intlibspace.o)
+    0x00001270   0x0000001c   Code   RO          225    .text               c_w.l(_chval.o)
+    0x0000128c   0x0000000c   Code   RO          230    .text               c_w.l(exit.o)
+    0x00001298   0x00000080   Code   RO          240    .text               c_w.l(strcmpv7m.o)
+    0x00001318   0x0000000c   Code   RO          296    .text               c_w.l(sys_exit.o)
+    0x00001324   0x00000002   Code   RO          307    .text               c_w.l(use_no_semi.o)
+    0x00001326   0x00000000   Code   RO          309    .text               c_w.l(indicate_semi.o)
+    0x00001326   0x00000002   PAD
+    0x00001328   0x0000002c   Code   RO          228    locale$$code        c_w.l(lc_ctype_c.o)
+    0x00001354   0x0000000a   Code   RO          294    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0000135e   0x00000002   PAD
+    0x00001360   0x00000000   Data   RO          361    Region$$Table       anon$$obj.o
+    0x00001360   0x00000110   Data   RO          227    locale$$data        c_w.l(lc_ctype_c.o)
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x00000024, Max: 0xffffffff, ABSOLUTE)
