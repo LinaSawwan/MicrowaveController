@@ -120,6 +120,7 @@ bool Is_Number(unsigned char chr){
 		return false;
 	else return true;
 }
+
 void pause (){                      //pause state
 	while((SW1_Read() == 1)&&(SW2_Read() == 1)){
 										RGB_TOGGLE();
@@ -127,6 +128,17 @@ void pause (){                      //pause state
 										
 	}
 }
+
+void Error_msg(){
+	LCD_VCLRScreen();
+	RGB_OFF();
+	RED_ON();
+	LCD_write_string("ERR");
+	delay_s(2);
+	LCD_VCLRScreen();
+	RED_OFF();
+}
+
 
 bool Is_Programme(unsigned char chr){
 	if( (chr=='A')||(chr=='B')||(chr=='C')||(chr=='D')){
