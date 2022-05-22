@@ -25,6 +25,7 @@ void EnterTime();
 void display_numbers();
 void pause ();
 void StartCooking();
+void Error_msg();
 
 int main(){
 	
@@ -92,10 +93,23 @@ int main(){
 					 
 					
 					
-					case SetWeight:                          //SetWeight State
+					 case SetWeight:                             //SetWeight State
+				
+					while(keypad_getkey()==0xFF);
+					weight=keypad_getkey();     
+					/*if(check if valid weight(weight)){
+						Error_msg();
+						if (prog == 'B'){
+							LCD_write_string("Beef weight?");
+						}
+
+						else if (prog == 'C'){
+							LCD_write_string("Chicken weight?");
+						}
+						delay_s(2);
 						break;
-					
-					
+					}
+					*/
 					
 					case SetTime:                            //SetTime State
 						break;
