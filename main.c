@@ -35,16 +35,19 @@ int main(){
 		
 		SAME_PROG=true;
 		state = Idle;
-		LCD_write_string("A-Popcorn B-Beef");
-		LCD_goto_position(1,2);
-		LCD_write_string("C-Chicken D-Else");
-		delay_s(2);
-		LCD_VCLRScreen();
 		
-		while( keypad_getkey() == 0xFF );
+		while( keypad_getkey() == 0xFF ){
+			LCD_write_string("A-Popcorn B-Beef");
+	   	LCD_goto_position(1,2);
+		  LCD_write_string("C-Chicken D-Else");
+		  delay_ms(800);
+			LCD_VCLRScreen();
+		}		
+		
 		prog = keypad_getkey();
+		delay_s(1);
 		
-		if(true){                       //CHeck if it's A/B/C/D
+		if(Is_Programme(prog)){                       //CHeck if it's A/B/C/D
 			
 			LCD_VCLRScreen();
 			LCD_char(prog);
@@ -85,12 +88,6 @@ int main(){
 						state=SetTime;
 						break;
 					 }
-
-					 
-					 
-					case Cooking:                             //Cooking State
-						break;
-					 
 					
 					
 					 case SetWeight:                             //SetWeight State
@@ -113,7 +110,10 @@ int main(){
 					
 					case SetTime:                            //SetTime State
 						break;
-				
+				   
+					case Cooking:                             //Cooking State
+						break;
+					 
 				
 				}
 			}
