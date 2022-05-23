@@ -45,10 +45,14 @@ main.c(27): warning:  #1295-D: Deprecated declaration StartCooking - give arg ty
   int StartCooking();
 main.c(28): warning:  #1295-D: Deprecated declaration Error_msg - give arg types
   void Error_msg();
-main.c: 6 warnings, 0 errors
+main.c(59): warning:  #546-D: transfer of control bypasses initialization of:
+            variable "weight" (declared at line 96)
+                                switch (state){
+                                ^
+main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=4336 RO-data=924 RW-data=36 ZI-data=612  
-".\MicrowaveController.axf" - 0 Error(s), 13 Warning(s).
+Program Size: Code=4380 RO-data=924 RW-data=32 ZI-data=608  
+".\MicrowaveController.axf" - 0 Error(s), 14 Warning(s).
 </pre>
 </body>
 </html>

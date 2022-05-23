@@ -11,11 +11,11 @@
 #include <stdlib.h>
 
 // Global variables
-enum states{Idle, Cooking, SetWeight, SetTime};
+enum states{Idle, SetWeight, SetTime, Cooking, OPEN, PAUSE, DONE, RESET};
 int state;
 unsigned char prog;
 unsigned int number_of_seconds;
-char weight;
+
 bool SAME_PROG = true;
 
 void SysInit(void);
@@ -93,7 +93,7 @@ int main(){
 					 case SetWeight:                             //SetWeight State
 				
 					while(keypad_getkey()==0xFF);
-					weight=keypad_getkey();     
+					char weight=keypad_getkey();     
 					/*if(check if valid weight(weight)){
 						Error_msg();
 						if (prog == 'B'){
@@ -113,8 +113,26 @@ int main(){
 				   
 					case Cooking:                             //Cooking State
 						break;
-					 
-				
+					
+					case OPEN:
+						while(SW3_Read()==0){         
+											RGB_TOGGLE();
+											Buzzer_TOGGLE();
+											delay_s(1);	
+									 }
+						Buzzer_OFF();
+						
+					case PAUSE:		
+						//pause function plus 3 if conditions Continue/OpenDoor/Reset
+					
+					case DONE:                         
+					  
+					case RESET:
+						LCD_VCLRScreen();
+						RGB_OFF();
+						SAME_PROG = false;
+						break;
+           
 				}
 			}
 		}
