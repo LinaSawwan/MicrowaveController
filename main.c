@@ -152,6 +152,12 @@ bool Is_Number(unsigned char chr){
 		return false;
 	else return true;
 }
+bool Is_ValidWeight (unsigned char chr){
+ if (Is_Number(chr)&(chr!='0'))
+	 return true;
+ else
+	 return false;
+}
 
 void pause (){                      //pause state
 	while((SW1_Read() == 1)&&(SW2_Read() == 1)){
