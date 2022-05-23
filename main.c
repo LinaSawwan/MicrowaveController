@@ -24,7 +24,7 @@ bool Is_Programme(unsigned char chr);
 void EnterTime();
 void display_numbers();
 void pause ();
-void StartCooking();
+int StartCooking();
 void Error_msg();
 
 int main(){
@@ -210,33 +210,46 @@ void EnterTime(){
     
 }
 
-void StartCooking(){
-    if (SW2_Read() == 0){
-        for (int i=0;i< number_of_seconds ;i++){
-            while (SW3_Read() == 0 & SW1_Read() == 1){
-                //send 1
-                delay_ms (1);
-            }
-            //send 2
-            if (SW3_Read() == 1 & SW1_Read() == 1){
-                while (SW3_Read() == 1 || SW1_Read() == 1);
-                if (SW1_Read() == 0){
-                    //send 0
-                }
-            }
-            if (SW1_Read() == 0 & SW3_Read() == 0){
-                while(SW1_Read() == 1 || SW2_Read() == 1);
-                if (SW1_Read() == 0){
-                    //send 0
-                }
-                if (SW2_Read() == 0 & SW3_Read() == 1){
-                    while (SW3_Read()== 1);
-                }
-            }
+int StartCooking(){
+    
+            for (int i=number_of_seconds;i>=0;i--){
+							
+							if(SW3_Read()==0){
+								while(SW3_Read()==0){         //opened Door state
+								
+									RGB_TOGGLE();
+									Buzzer_TOGGLE();
+									delay_s(1);	
+								} 					                  
+								Buzzer_OFF();
+								pause();                      //pause state
+								if (SW1_Read() == 0){
+										//display_numbers(0);
+										delay_ms(500);
+										LCD_VCLRScreen();
+										return 0;
+								}
+						  }				                        
+							
+							if ( SW1_Read() == 1){          //Not paused
+								RGB_ON(); 
+                delay_s (1);
+								display_numbers(number_of_seconds--);
+							}
+							else{
+									delay_s(1);
+									pause();                    //pause state
+									if (SW1_Read() == 0){
+										
+										delay_ms(500);
+										LCD_VCLRScreen();
+											return 0;
+									}
+							}
         }
-    }
-
+				return 1;
 }
+ 
 
 void display_numbers() {
 int number_of_minutes =  number_of_seconds/60;

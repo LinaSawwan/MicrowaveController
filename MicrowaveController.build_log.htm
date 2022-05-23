@@ -3,28 +3,30 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\For Keil\Embedded project\MicrowaveController\MicrowaveController.uvproj
+C:\Users\EES\OneDrive\Desktop\project Embedded\MicrowaveController\MicrowaveController.uvproj
 Project File Date:  05/23/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
-assembling startup_TM4C123.s...
-compiling led.c...
-compiling delay.c...
-delay.c(32): warning:  #1-D: last line of file ends without a newline
-  }
-delay.c: 1 warning, 0 errors
-compiling button.c...
-compiling lcd.c...
-lcd.c(104): warning:  #1-D: last line of file ends without a newline
-  }
-lcd.c: 1 warning, 0 errors
 compiling buzzer.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
 buzzer.c(26): warning:  #1-D: last line of file ends without a newline
   }
-buzzer.c: 1 warning, 0 errors
+buzzer.c: 3 warnings, 0 errors
 compiling keypad.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
+keypad.c: 2 warnings, 0 errors
 compiling main.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
 main.c(24): warning:  #1295-D: Deprecated declaration EnterTime - give arg types
   void EnterTime();
 main.c(25): warning:  #1295-D: Deprecated declaration display_numbers - give arg types
@@ -32,13 +34,13 @@ main.c(25): warning:  #1295-D: Deprecated declaration display_numbers - give arg
 main.c(26): warning:  #1295-D: Deprecated declaration pause - give arg types
   void pause ();
 main.c(27): warning:  #1295-D: Deprecated declaration StartCooking - give arg types
-  void StartCooking();
+  int StartCooking();
 main.c(28): warning:  #1295-D: Deprecated declaration Error_msg - give arg types
   void Error_msg();
-main.c: 5 warnings, 0 errors
+main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=4524 RO-data=924 RW-data=36 ZI-data=612  
-".\MicrowaveController.axf" - 0 Error(s), 8 Warning(s).
+Program Size: Code=4464 RO-data=924 RW-data=36 ZI-data=612  
+".\MicrowaveController.axf" - 0 Error(s), 12 Warning(s).
 </pre>
 </body>
 </html>
