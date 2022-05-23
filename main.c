@@ -22,7 +22,7 @@ void SysInit(void);
 bool Is_Number(unsigned char chr);
 bool Is_Programme(unsigned char chr);
 void EnterTime();
-void display_numbers();
+void display_numbers(int number_of_seconds);
 void pause ();
 int StartCooking();
 void Error_msg();
@@ -251,50 +251,23 @@ int StartCooking(){
 }
  
 
-void display_numbers() {
-int number_of_minutes =  number_of_seconds/60;
-int number_of_seconds_reminder = ( number_of_seconds - number_of_minutes * 60) ;
-int j;
-int i;	
- for(j=number_of_minutes ; j>= 0 ;j--)
-    
-   { if (number_of_seconds_reminder != 0) 
-    { for ( i = number_of_seconds_reminder ; i> 0 ; i--) 
-   {    
-		     char min[2]={0,0};
-		     char sec1[2]={0,0};
-		     sprintf(min, "%d" ,number_of_minutes);
-         LCD_write_string(min); 
-         LCD_char(':');
-		     sprintf(sec1, "%d" ,number_of_seconds_reminder ); 
-         LCD_write_string(sec1);
-         delay_s(1);
-         number_of_seconds_reminder--;
-		     LCD_VCLRScreen();
-                } 
-         char min[2]={0,0};
-				 sprintf(min, "%d" ,number_of_minutes);			
-         LCD_write_string(min);
-         LCD_write_string(":");
-         LCD_write_string("00");
-			    delay_s(1);					
-         number_of_minutes--;
-						LCD_VCLRScreen();;
-       }
-                      
-    else  {  
-           for ( i = 59 ;i>= 0 ; i--)
-        {	char min[2]={0,0};
-		     char sec[2]={0,0};
-		       sprintf(min, "%d" ,number_of_minutes);
-           LCD_write_string(min); 
-           LCD_char(':');
-		       sprintf(sec, "%d" ,i); 
-           LCD_write_string(sec);	
-           delay_s(1);
-				   LCD_VCLRScreen();}
-           number_of_minutes--;
-					
-      }
- }  
-}
+void display_numbers(int number_of_seconds) {
+	int number_of_minutes =  number_of_seconds/60;
+	int number_of_seconds_reminder = ( number_of_seconds - number_of_minutes * 60) ;
+	LCD_VCLRScreen();  
+	char min[2];
+	char sec[2];
+	sprintf(min, "%d" ,number_of_minutes);
+ 
+	if(number_of_minutes<10)
+		LCD_write_string("0"); 
+	 
+  LCD_write_string(min); 
+  LCD_char(':');
+
+  if(number_of_seconds_reminder<10)
+    LCD_write_string("0"); 
+
+	sprintf(sec, "%d" ,number_of_seconds_reminder ); 
+	LCD_write_string(sec);
+  }
