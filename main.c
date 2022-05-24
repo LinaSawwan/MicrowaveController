@@ -11,21 +11,23 @@
 #include <stdlib.h>
 
 // Global variables
-enum states{Idle, SetWeight, SetTime, Cooking, OPEN, PAUSE, DONE, RESET};
+enum states{Idle, SetWeight, SetTime, Cooking, PAUSE, DONE, RESET};
 int state;
 unsigned char prog;
 unsigned int number_of_seconds;
-
 bool SAME_PROG = true;
 
 void SysInit(void);
-bool Is_Number(unsigned char chr);
 bool Is_Programme(unsigned char chr);
-void EnterTime();
-void display_numbers(int number_of_seconds);
-void pause ();
-int StartCooking();
+bool Is_Number(unsigned char chr);
+bool Is_ValidWeight (unsigned char chr);
 void Error_msg();
+void display_numbers(int number_of_seconds);
+void EnterTime();
+void openDoor();
+void pause();
+void done();
+void reset();
 
 int main(){
 	
@@ -34,7 +36,7 @@ int main(){
 	while(1){
 		
 		SAME_PROG=true;
-		state = Idle;
+		state = Idle;              //Default State 
 		
 		while( keypad_getkey() == 0xFF ){
 			LCD_write_string("A-Popcorn B-Beef");
@@ -58,7 +60,7 @@ int main(){
 				
 				switch (state){
 					
-					case Idle:                //Idle State
+					case Idle:                               //Idle State
 						if(prog=='A'){ 						             //Popcorn programme
 						
 					  LCD_write_string("Popcorn");
@@ -90,23 +92,8 @@ int main(){
 					 }
 					
 					
-					 case SetWeight:                             //SetWeight State
-				
-					while(keypad_getkey()==0xFF);
-					char weight=keypad_getkey();     
-					/*if(check if valid weight(weight)){
-						Error_msg();
-						if (prog == 'B'){
-							LCD_write_string("Beef weight?");
-						}
-
-						else if (prog == 'C'){
-							LCD_write_string("Chicken weight?");
-						}
-						delay_s(2);
+					case SetWeight:                             //SetWeight State
 						break;
-					}
-					*/
 					
 					case SetTime:                            //SetTime State
 						break;
@@ -114,23 +101,15 @@ int main(){
 					case Cooking:                             //Cooking State
 						break;
 					
-					case OPEN:
-						while(SW3_Read()==0){         
-											RGB_TOGGLE();
-											Buzzer_TOGGLE();
-											delay_s(1);	
-									 }
-						Buzzer_OFF();
-						
 					case PAUSE:		
 						//pause function plus 3 if conditions Continue/OpenDoor/Reset
+						break;
 					
-					case DONE:                         
+					case DONE:
+						done();
 					  
 					case RESET:
-						LCD_VCLRScreen();
-						RGB_OFF();
-						SAME_PROG = false;
+						reset();
 						break;
            
 				}
@@ -147,6 +126,12 @@ void SysInit(){
 	Buzzer_VInit ();
 }
 
+bool Is_Programme(unsigned char chr){
+	if( (chr=='A')||(chr=='B')||(chr=='C')||(chr=='D')){
+		return true;}
+	else return false;
+}
+
 bool Is_Number(unsigned char chr){
 	if( chr<48 | chr>57)
 		return false;
@@ -159,14 +144,6 @@ bool Is_ValidWeight (unsigned char chr){
 	 return false;
 }
 
-void pause (){                      //pause state
-	while((SW1_Read() == 1)&&(SW2_Read() == 1)){
-										RGB_TOGGLE();
-										delay_s(1);
-										
-	}
-}
-
 void Error_msg(){
 	LCD_VCLRScreen();
 	RGB_OFF();
@@ -177,12 +154,27 @@ void Error_msg(){
 	RED_OFF();
 }
 
+void display_numbers(int number_of_seconds) {
+	int number_of_minutes =  number_of_seconds/60;
+	int number_of_seconds_reminder = ( number_of_seconds - number_of_minutes * 60) ;
+	LCD_VCLRScreen();  
+	char min[2];
+	char sec[2];
+	sprintf(min, "%d" ,number_of_minutes);
+ 
+	if(number_of_minutes<10)
+		LCD_write_string("0"); 
+	 
+  LCD_write_string(min); 
+  LCD_char(':');
 
-bool Is_Programme(unsigned char chr){
-	if( (chr=='A')||(chr=='B')||(chr=='C')||(chr=='D')){
-		return true;}
-	else return false;
-}
+  if(number_of_seconds_reminder<10)
+    LCD_write_string("0"); 
+
+	sprintf(sec, "%d" ,number_of_seconds_reminder ); 
+	LCD_write_string(sec);
+  }
+
 
 void EnterTime(){
 	unsigned char nb='0';
@@ -234,6 +226,20 @@ void EnterTime(){
     
 }
 
+void openDoor(){
+
+}
+void pause(){
+
+}
+void done(){
+
+}
+void reset(){
+
+}
+
+
 int StartCooking(){
     
             for (int i=number_of_seconds;i>=0;i--){
@@ -275,23 +281,4 @@ int StartCooking(){
 }
  
 
-void display_numbers(int number_of_seconds) {
-	int number_of_minutes =  number_of_seconds/60;
-	int number_of_seconds_reminder = ( number_of_seconds - number_of_minutes * 60) ;
-	LCD_VCLRScreen();  
-	char min[2];
-	char sec[2];
-	sprintf(min, "%d" ,number_of_minutes);
- 
-	if(number_of_minutes<10)
-		LCD_write_string("0"); 
-	 
-  LCD_write_string(min); 
-  LCD_char(':');
 
-  if(number_of_seconds_reminder<10)
-    LCD_write_string("0"); 
-
-	sprintf(sec, "%d" ,number_of_seconds_reminder ); 
-	LCD_write_string(sec);
-  }
