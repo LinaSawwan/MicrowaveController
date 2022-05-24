@@ -308,8 +308,13 @@ void EnterTime(){
 }
 
 void openDoor(){
-
+	while(SW3_Read()==0){         
+		RGB_TOGGLE();
+		Buzzer_TOGGLE();
+		delay_s(1);	
+	}
 }
+
 void pause(){
 Buzzer_OFF();		
 	delay_ms(1700);

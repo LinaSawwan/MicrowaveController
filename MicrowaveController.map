@@ -323,35 +323,35 @@ Image Symbol Table
     .text                                    0x000008a8   Section        0  buzzer.o(.text)
     .text                                    0x0000096c   Section        0  keypad.o(.text)
     .text                                    0x00000aa0   Section        0  main.o(.text)
-    .text                                    0x00001000   Section        0  noretval__2sprintf.o(.text)
-    .text                                    0x00001028   Section        0  __printf.o(.text)
-    .text                                    0x00001090   Section        0  _printf_dec.o(.text)
-    .text                                    0x00001108   Section        0  atoi.o(.text)
-    .text                                    0x00001122   Section        0  heapauxi.o(.text)
-    .text                                    0x00001128   Section        8  rt_errno_addr_intlibspace.o(.text)
-    .text                                    0x00001130   Section        0  _printf_intcommon.o(.text)
-    .text                                    0x000011e8   Section        0  _printf_char_common.o(.text)
-    _printf_input_char                       0x000011e9   Thumb Code    10  _printf_char_common.o(.text)
-    .text                                    0x00001218   Section        0  _sputc.o(.text)
-    .text                                    0x00001222   Section        0  strtol.o(.text)
-    .text                                    0x00001294   Section        8  libspace.o(.text)
-    .text                                    0x0000129c   Section       16  rt_ctype_table.o(.text)
-    .text                                    0x000012ac   Section        0  _strtoul.o(.text)
-    .text                                    0x0000134a   Section       74  sys_stackheap_outer.o(.text)
-    .text                                    0x00001394   Section        8  rt_locale_intlibspace.o(.text)
-    .text                                    0x0000139c   Section        0  _chval.o(.text)
-    .text                                    0x000013b8   Section        0  exit.o(.text)
-    .text                                    0x000013c4   Section      128  strcmpv7m.o(.text)
-    .text                                    0x00001444   Section        0  sys_exit.o(.text)
-    .text                                    0x00001450   Section        2  use_no_semi.o(.text)
-    .text                                    0x00001452   Section        0  indicate_semi.o(.text)
-    locale$$code                             0x00001454   Section       44  lc_ctype_c.o(locale$$code)
-    x$fpl$fpinit                             0x00001480   Section       10  fpinit.o(x$fpl$fpinit)
-    $v0                                      0x00001480   Number         0  fpinit.o(x$fpl$fpinit)
-    locale$$data                             0x000014ac   Section      272  lc_ctype_c.o(locale$$data)
-    __lcctype_c_name                         0x000014b0   Data           2  lc_ctype_c.o(locale$$data)
-    __lcctype_c_start                        0x000014b8   Data           0  lc_ctype_c.o(locale$$data)
-    __lcctype_c_end                          0x000015bc   Data           0  lc_ctype_c.o(locale$$data)
+    .text                                    0x0000101c   Section        0  noretval__2sprintf.o(.text)
+    .text                                    0x00001044   Section        0  __printf.o(.text)
+    .text                                    0x000010ac   Section        0  _printf_dec.o(.text)
+    .text                                    0x00001124   Section        0  atoi.o(.text)
+    .text                                    0x0000113e   Section        0  heapauxi.o(.text)
+    .text                                    0x00001144   Section        8  rt_errno_addr_intlibspace.o(.text)
+    .text                                    0x0000114c   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x00001204   Section        0  _printf_char_common.o(.text)
+    _printf_input_char                       0x00001205   Thumb Code    10  _printf_char_common.o(.text)
+    .text                                    0x00001234   Section        0  _sputc.o(.text)
+    .text                                    0x0000123e   Section        0  strtol.o(.text)
+    .text                                    0x000012b0   Section        8  libspace.o(.text)
+    .text                                    0x000012b8   Section       16  rt_ctype_table.o(.text)
+    .text                                    0x000012c8   Section        0  _strtoul.o(.text)
+    .text                                    0x00001366   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x000013b0   Section        8  rt_locale_intlibspace.o(.text)
+    .text                                    0x000013b8   Section        0  _chval.o(.text)
+    .text                                    0x000013d4   Section        0  exit.o(.text)
+    .text                                    0x000013e0   Section      128  strcmpv7m.o(.text)
+    .text                                    0x00001460   Section        0  sys_exit.o(.text)
+    .text                                    0x0000146c   Section        2  use_no_semi.o(.text)
+    .text                                    0x0000146e   Section        0  indicate_semi.o(.text)
+    locale$$code                             0x00001470   Section       44  lc_ctype_c.o(locale$$code)
+    x$fpl$fpinit                             0x0000149c   Section       10  fpinit.o(x$fpl$fpinit)
+    $v0                                      0x0000149c   Number         0  fpinit.o(x$fpl$fpinit)
+    locale$$data                             0x000014c8   Section      272  lc_ctype_c.o(locale$$data)
+    __lcctype_c_name                         0x000014cc   Data           2  lc_ctype_c.o(locale$$data)
+    __lcctype_c_start                        0x000014d4   Data           0  lc_ctype_c.o(locale$$data)
+    __lcctype_c_end                          0x000015d8   Data           0  lc_ctype_c.o(locale$$data)
     .data                                    0x20000000   Section       16  keypad.o(.data)
     .data                                    0x20000010   Section       16  main.o(.data)
     .bss                                     0x20000020   Section       96  libspace.o(.bss)
@@ -600,50 +600,50 @@ Image Symbol Table
     reset                                    0x00000aa1   Thumb Code    18  main.o(.text)
     done                                     0x00000ab3   Thumb Code     2  main.o(.text)
     pause                                    0x00000ab5   Thumb Code    52  main.o(.text)
-    openDoor                                 0x00000ae9   Thumb Code     2  main.o(.text)
-    display_numbers                          0x00000aeb   Thumb Code    82  main.o(.text)
-    Error_msg                                0x00000b3d   Thumb Code    36  main.o(.text)
-    Is_Number                                0x00000b61   Thumb Code    34  main.o(.text)
-    EnterTime                                0x00000b83   Thumb Code   258  main.o(.text)
-    Is_ValidWeight                           0x00000c85   Thumb Code    32  main.o(.text)
-    Is_Programme                             0x00000ca5   Thumb Code    26  main.o(.text)
-    SysInit                                  0x00000cbf   Thumb Code    24  main.o(.text)
-    main                                     0x00000cd7   Thumb Code   798  main.o(.text)
-    __2sprintf                               0x00001001   Thumb Code    34  noretval__2sprintf.o(.text)
-    __printf                                 0x00001029   Thumb Code   104  __printf.o(.text)
-    _printf_int_dec                          0x00001091   Thumb Code   102  _printf_dec.o(.text)
-    atoi                                     0x00001109   Thumb Code    26  atoi.o(.text)
-    __use_two_region_memory                  0x00001123   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_escrow$2region                 0x00001125   Thumb Code     2  heapauxi.o(.text)
-    __rt_heap_expand$2region                 0x00001127   Thumb Code     2  heapauxi.o(.text)
-    __aeabi_errno_addr                       0x00001129   Thumb Code     8  rt_errno_addr_intlibspace.o(.text)
-    __errno$intlibspace                      0x00001129   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
-    __rt_errno_addr$intlibspace              0x00001129   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
-    _printf_int_common                       0x00001131   Thumb Code   184  _printf_intcommon.o(.text)
-    _printf_char_common                      0x000011f3   Thumb Code    32  _printf_char_common.o(.text)
-    _sputc                                   0x00001219   Thumb Code    10  _sputc.o(.text)
-    strtol                                   0x00001223   Thumb Code   112  strtol.o(.text)
-    __user_libspace                          0x00001295   Thumb Code     8  libspace.o(.text)
-    __user_perproc_libspace                  0x00001295   Thumb Code     0  libspace.o(.text)
-    __user_perthread_libspace                0x00001295   Thumb Code     0  libspace.o(.text)
-    __rt_ctype_table                         0x0000129d   Thumb Code    16  rt_ctype_table.o(.text)
-    _strtoul                                 0x000012ad   Thumb Code   158  _strtoul.o(.text)
-    __user_setup_stackheap                   0x0000134b   Thumb Code    74  sys_stackheap_outer.o(.text)
-    __rt_locale                              0x00001395   Thumb Code     8  rt_locale_intlibspace.o(.text)
-    _chval                                   0x0000139d   Thumb Code    28  _chval.o(.text)
-    exit                                     0x000013b9   Thumb Code    12  exit.o(.text)
-    strcmp                                   0x000013c5   Thumb Code   128  strcmpv7m.o(.text)
-    _sys_exit                                0x00001445   Thumb Code     8  sys_exit.o(.text)
-    __I$use$semihosting                      0x00001451   Thumb Code     0  use_no_semi.o(.text)
-    __use_no_semihosting_swi                 0x00001451   Thumb Code     2  use_no_semi.o(.text)
-    __semihosting_library_function           0x00001453   Thumb Code     0  indicate_semi.o(.text)
-    _get_lc_ctype                            0x00001455   Thumb Code    44  lc_ctype_c.o(locale$$code)
-    _fp_init                                 0x00001481   Thumb Code    10  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x00001489   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x00001489   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x0000148c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x000014ac   Number         0  anon$$obj.o(Region$$Table)
-    __ctype                                  0x000014b9   Data           0  lc_ctype_c.o(locale$$data)
+    openDoor                                 0x00000ae9   Thumb Code    28  main.o(.text)
+    display_numbers                          0x00000b05   Thumb Code    82  main.o(.text)
+    Error_msg                                0x00000b57   Thumb Code    36  main.o(.text)
+    Is_Number                                0x00000b7b   Thumb Code    34  main.o(.text)
+    EnterTime                                0x00000b9d   Thumb Code   258  main.o(.text)
+    Is_ValidWeight                           0x00000c9f   Thumb Code    32  main.o(.text)
+    Is_Programme                             0x00000cbf   Thumb Code    26  main.o(.text)
+    SysInit                                  0x00000cd9   Thumb Code    24  main.o(.text)
+    main                                     0x00000cf1   Thumb Code   800  main.o(.text)
+    __2sprintf                               0x0000101d   Thumb Code    34  noretval__2sprintf.o(.text)
+    __printf                                 0x00001045   Thumb Code   104  __printf.o(.text)
+    _printf_int_dec                          0x000010ad   Thumb Code   102  _printf_dec.o(.text)
+    atoi                                     0x00001125   Thumb Code    26  atoi.o(.text)
+    __use_two_region_memory                  0x0000113f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00001141   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00001143   Thumb Code     2  heapauxi.o(.text)
+    __aeabi_errno_addr                       0x00001145   Thumb Code     8  rt_errno_addr_intlibspace.o(.text)
+    __errno$intlibspace                      0x00001145   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
+    __rt_errno_addr$intlibspace              0x00001145   Thumb Code     0  rt_errno_addr_intlibspace.o(.text)
+    _printf_int_common                       0x0000114d   Thumb Code   184  _printf_intcommon.o(.text)
+    _printf_char_common                      0x0000120f   Thumb Code    32  _printf_char_common.o(.text)
+    _sputc                                   0x00001235   Thumb Code    10  _sputc.o(.text)
+    strtol                                   0x0000123f   Thumb Code   112  strtol.o(.text)
+    __user_libspace                          0x000012b1   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x000012b1   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x000012b1   Thumb Code     0  libspace.o(.text)
+    __rt_ctype_table                         0x000012b9   Thumb Code    16  rt_ctype_table.o(.text)
+    _strtoul                                 0x000012c9   Thumb Code   158  _strtoul.o(.text)
+    __user_setup_stackheap                   0x00001367   Thumb Code    74  sys_stackheap_outer.o(.text)
+    __rt_locale                              0x000013b1   Thumb Code     8  rt_locale_intlibspace.o(.text)
+    _chval                                   0x000013b9   Thumb Code    28  _chval.o(.text)
+    exit                                     0x000013d5   Thumb Code    12  exit.o(.text)
+    strcmp                                   0x000013e1   Thumb Code   128  strcmpv7m.o(.text)
+    _sys_exit                                0x00001461   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x0000146d   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x0000146d   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x0000146f   Thumb Code     0  indicate_semi.o(.text)
+    _get_lc_ctype                            0x00001471   Thumb Code    44  lc_ctype_c.o(locale$$code)
+    _fp_init                                 0x0000149d   Thumb Code    10  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x000014a5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x000014a5   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x000014a8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x000014c8   Number         0  anon$$obj.o(Region$$Table)
+    __ctype                                  0x000014d5   Data           0  lc_ctype_c.o(locale$$data)
     symbol                                   0x20000000   Data          16  keypad.o(.data)
     SAME_PROG                                0x20000010   Data           1  main.o(.data)
     state                                    0x20000014   Data           4  main.o(.data)
@@ -661,9 +661,9 @@ Memory Map of the image
 
   Image Entry point : 0x00000329
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000015dc, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000015f8, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x000015bc, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x000015d8, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -725,35 +725,35 @@ Memory Map of the image
     0x000006cc   0x000001dc   Code   RO           59    .text               lcd.o
     0x000008a8   0x000000c4   Code   RO           77    .text               buzzer.o
     0x0000096c   0x00000134   Code   RO           92    .text               keypad.o
-    0x00000aa0   0x00000560   Code   RO          110    .text               main.o
-    0x00001000   0x00000028   Code   RO          145    .text               c_w.l(noretval__2sprintf.o)
-    0x00001028   0x00000068   Code   RO          147    .text               c_w.l(__printf.o)
-    0x00001090   0x00000078   Code   RO          149    .text               c_w.l(_printf_dec.o)
-    0x00001108   0x0000001a   Code   RO          173    .text               c_w.l(atoi.o)
-    0x00001122   0x00000006   Code   RO          175    .text               c_w.l(heapauxi.o)
-    0x00001128   0x00000008   Code   RO          183    .text               c_w.l(rt_errno_addr_intlibspace.o)
-    0x00001130   0x000000b8   Code   RO          185    .text               c_w.l(_printf_intcommon.o)
-    0x000011e8   0x00000030   Code   RO          187    .text               c_w.l(_printf_char_common.o)
-    0x00001218   0x0000000a   Code   RO          189    .text               c_w.l(_sputc.o)
-    0x00001222   0x00000070   Code   RO          192    .text               c_w.l(strtol.o)
-    0x00001292   0x00000002   PAD
-    0x00001294   0x00000008   Code   RO          194    .text               c_w.l(libspace.o)
-    0x0000129c   0x00000010   Code   RO          212    .text               c_w.l(rt_ctype_table.o)
-    0x000012ac   0x0000009e   Code   RO          216    .text               c_w.l(_strtoul.o)
-    0x0000134a   0x0000004a   Code   RO          218    .text               c_w.l(sys_stackheap_outer.o)
-    0x00001394   0x00000008   Code   RO          223    .text               c_w.l(rt_locale_intlibspace.o)
-    0x0000139c   0x0000001c   Code   RO          225    .text               c_w.l(_chval.o)
-    0x000013b8   0x0000000c   Code   RO          230    .text               c_w.l(exit.o)
-    0x000013c4   0x00000080   Code   RO          240    .text               c_w.l(strcmpv7m.o)
-    0x00001444   0x0000000c   Code   RO          296    .text               c_w.l(sys_exit.o)
-    0x00001450   0x00000002   Code   RO          307    .text               c_w.l(use_no_semi.o)
-    0x00001452   0x00000000   Code   RO          309    .text               c_w.l(indicate_semi.o)
-    0x00001452   0x00000002   PAD
-    0x00001454   0x0000002c   Code   RO          228    locale$$code        c_w.l(lc_ctype_c.o)
-    0x00001480   0x0000000a   Code   RO          294    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x0000148a   0x00000002   PAD
-    0x0000148c   0x00000020   Data   RO          361    Region$$Table       anon$$obj.o
-    0x000014ac   0x00000110   Data   RO          227    locale$$data        c_w.l(lc_ctype_c.o)
+    0x00000aa0   0x0000057c   Code   RO          110    .text               main.o
+    0x0000101c   0x00000028   Code   RO          145    .text               c_w.l(noretval__2sprintf.o)
+    0x00001044   0x00000068   Code   RO          147    .text               c_w.l(__printf.o)
+    0x000010ac   0x00000078   Code   RO          149    .text               c_w.l(_printf_dec.o)
+    0x00001124   0x0000001a   Code   RO          173    .text               c_w.l(atoi.o)
+    0x0000113e   0x00000006   Code   RO          175    .text               c_w.l(heapauxi.o)
+    0x00001144   0x00000008   Code   RO          183    .text               c_w.l(rt_errno_addr_intlibspace.o)
+    0x0000114c   0x000000b8   Code   RO          185    .text               c_w.l(_printf_intcommon.o)
+    0x00001204   0x00000030   Code   RO          187    .text               c_w.l(_printf_char_common.o)
+    0x00001234   0x0000000a   Code   RO          189    .text               c_w.l(_sputc.o)
+    0x0000123e   0x00000070   Code   RO          192    .text               c_w.l(strtol.o)
+    0x000012ae   0x00000002   PAD
+    0x000012b0   0x00000008   Code   RO          194    .text               c_w.l(libspace.o)
+    0x000012b8   0x00000010   Code   RO          212    .text               c_w.l(rt_ctype_table.o)
+    0x000012c8   0x0000009e   Code   RO          216    .text               c_w.l(_strtoul.o)
+    0x00001366   0x0000004a   Code   RO          218    .text               c_w.l(sys_stackheap_outer.o)
+    0x000013b0   0x00000008   Code   RO          223    .text               c_w.l(rt_locale_intlibspace.o)
+    0x000013b8   0x0000001c   Code   RO          225    .text               c_w.l(_chval.o)
+    0x000013d4   0x0000000c   Code   RO          230    .text               c_w.l(exit.o)
+    0x000013e0   0x00000080   Code   RO          240    .text               c_w.l(strcmpv7m.o)
+    0x00001460   0x0000000c   Code   RO          296    .text               c_w.l(sys_exit.o)
+    0x0000146c   0x00000002   Code   RO          307    .text               c_w.l(use_no_semi.o)
+    0x0000146e   0x00000000   Code   RO          309    .text               c_w.l(indicate_semi.o)
+    0x0000146e   0x00000002   PAD
+    0x00001470   0x0000002c   Code   RO          228    locale$$code        c_w.l(lc_ctype_c.o)
+    0x0000149c   0x0000000a   Code   RO          294    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x000014a6   0x00000002   PAD
+    0x000014a8   0x00000020   Data   RO          361    Region$$Table       anon$$obj.o
+    0x000014c8   0x00000110   Data   RO          227    locale$$data        c_w.l(lc_ctype_c.o)
 
 
     Execution Region ER_RW (Base: 0x20000000, Size: 0x00000020, Max: 0xffffffff, ABSOLUTE)
@@ -786,11 +786,11 @@ Image component sizes
        308         38          0         16          0       1377   keypad.o
        476         38          0          0          0       1752   lcd.o
        240         30          0          0          0       2327   led.o
-      1376        192          0         16          0       3943   main.o
+      1404        192          0         16          0       3991   main.o
        268         20        620          0        512       5428   startup_tm4c123.o
 
     ----------------------------------------------------------------------
-      3288        380        652         32        512      17612   Object Totals
+      3316        380        652         32        512      17660   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -859,15 +859,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      4640        448        924         32        608      17460   Grand Totals
-      4640        448        924         32        608      17460   ELF Image Totals
-      4640        448        924         32          0          0   ROM Totals
+      4668        448        924         32        608      17508   Grand Totals
+      4668        448        924         32        608      17508   ELF Image Totals
+      4668        448        924         32          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 5564 (   5.43kB)
+    Total RO  Size (Code + RO Data)                 5592 (   5.46kB)
     Total RW  Size (RW Data + ZI Data)               640 (   0.63kB)
-    Total ROM Size (Code + RO Data + RW Data)       5596 (   5.46kB)
+    Total ROM Size (Code + RO Data + RW Data)       5624 (   5.49kB)
 
 ==============================================================================
 
