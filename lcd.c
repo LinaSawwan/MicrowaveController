@@ -84,12 +84,6 @@ void LCD_write_string(char  *s)
 
 	return;
 }
-void LCD_SendString(char *data){
-	while((*data)!='\0'){
-		LCD_char((*data));
-		data++;
-	}
-};
 
 void LCD_goto_position(unsigned char  x,unsigned char  y)
 { // goes to position (x,y) on the display

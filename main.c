@@ -97,13 +97,55 @@ int main(){
 					
 					case SetTime:                            //SetTime State
 						break;
-				   
+				  		 
 					case Cooking:                             //Cooking State
-						break;
+					
+						while(SW2_Read()==1);
+						delay_ms(1);
+						int exit=0;
+						for (int i=number_of_seconds;i>=0;i--){
+							 
+								if(SW3_Read()==0){              //opened Door state
+									state=PAUSE;
+									exit=1;
+									break;
+								}			
+							
+								if ( SW1_Read() == 0){
+									state=PAUSE;
+									exit=1;
+									break;
+								}
+							
+								else{          //Continue 
+										RGB_ON(); 
+										delay_s (1);
+										display_numbers(number_of_seconds--);
+								}
+							
+					}
+					if(exit==1)
+							break;
+					display_numbers(0);	
+					state = DONE;
+					break;
 					
 					case PAUSE:		
-						//pause function plus 3 if conditions Continue/OpenDoor/Reset
-						break;
+						openDoor();
+				  pause();
+				
+					if (SW1_Read() == 0){
+					    state=RESET;
+							break;
+					}
+					if (SW3_Read() == 0){
+					    state=PAUSE;
+							break;
+					}
+					else{
+							state=Cooking;
+							break;
+					}
 					
 					case DONE:
 						done();
@@ -230,7 +272,12 @@ void openDoor(){
 
 }
 void pause(){
-
+Buzzer_OFF();		
+	delay_ms(1700);
+	while((SW1_Read() == 1)&&(SW2_Read() == 1)&&(SW3_Read() == 1)){
+						RGB_TOGGLE();
+						delay_s(1);
+	}
 }
 void done(){
 
@@ -240,45 +287,6 @@ void reset(){
 }
 
 
-int StartCooking(){
-    
-            for (int i=number_of_seconds;i>=0;i--){
-							
-							if(SW3_Read()==0){
-								while(SW3_Read()==0){         //opened Door state
-								
-									RGB_TOGGLE();
-									Buzzer_TOGGLE();
-									delay_s(1);	
-								} 					                  
-								Buzzer_OFF();
-								pause();                      //pause state
-								if (SW1_Read() == 0){
-										//display_numbers(0);
-										delay_ms(500);
-										LCD_VCLRScreen();
-										return 0;
-								}
-						  }				                        
-							
-							if ( SW1_Read() == 1){          //Not paused
-								RGB_ON(); 
-                delay_s (1);
-								display_numbers(number_of_seconds--);
-							}
-							else{
-									delay_s(1);
-									pause();                    //pause state
-									if (SW1_Read() == 0){
-										
-										delay_ms(500);
-										LCD_VCLRScreen();
-											return 0;
-									}
-							}
-        }
-				return 1;
-}
- 
+
 
 

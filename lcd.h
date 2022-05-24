@@ -28,6 +28,5 @@ void PortB_Init(void);
 void PortE_Init (void);
 void LCD_Init(void);
 void LCD_write_string(char  *s);
-void LCD_SendString(char *data);
 void LCD_VCLRScreen(void);
 void LCD_goto_position(unsigned char  x,unsigned char  y);
