@@ -131,6 +131,10 @@ int main(){
 				 }
 					
 					case SetTime:                            //SetTime State
+						LCD_VCLRScreen();
+						EnterTime();
+						while(SW2_Read()==1); 
+						state = Cooking;
 						break;
 				  		 
 					case Cooking:                             //Cooking State
