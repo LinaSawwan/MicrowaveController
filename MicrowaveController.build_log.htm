@@ -3,11 +3,30 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\Andrew\Desktop\study\Embedded Systems\Embedded Project\MicrowaveController\MicrowaveController.uvproj
+C:\Users\Andrew\Desktop\Embedded Project\MicrowaveController\MicrowaveController.uvproj
 Project File Date:  05/24/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
+compiling led.c...
+compiling delay.c...
+delay.c(32): warning:  #1-D: last line of file ends without a newline
+  }
+delay.c: 1 warning, 0 errors
+compiling button.c...
+compiling lcd.c...
+compiling buzzer.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
+buzzer.c: 2 warnings, 0 errors
+compiling keypad.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
+keypad.c: 2 warnings, 0 errors
 compiling main.c...
 buzzer.h(7): warning:  #1-D: last line of file ends without a newline
   void Buzzer_TOGGLE ();
@@ -31,8 +50,8 @@ main.c(62): warning:  #546-D: transfer of control bypasses initialization of:
                                 ^
 main.c: 9 warnings, 0 errors
 linking...
-Program Size: Code=4668 RO-data=924 RW-data=32 ZI-data=608  
-".\MicrowaveController.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=4732 RO-data=924 RW-data=32 ZI-data=608  
+".\MicrowaveController.axf" - 0 Error(s), 14 Warning(s).
 </pre>
 </body>
 </html>

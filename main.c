@@ -324,6 +324,15 @@ Buzzer_OFF();
 	}
 }
 void done(){
+	delay_s(1);
+	LCD_VCLRScreen();
+	LCD_write_string("DONE");
+	RGB_OFF();
+	for(int i=0;i<6;i++){
+	delay_s(1);
+	RGB_TOGGLE();
+	Buzzer_TOGGLE();
+	}
 
 }
 void reset(){
