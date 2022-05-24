@@ -3,11 +3,31 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-C:\Users\EES\OneDrive\Desktop\project Embedded\MicrowaveController\MicrowaveController.uvproj
+D:\For Keil\Embedded project\MicrowaveController\MicrowaveController.uvproj
 Project File Date:  05/24/2022
 
 <h2>Output:</h2>
 Build target 'Target 1'
+assembling startup_TM4C123.s...
+compiling led.c...
+compiling delay.c...
+delay.c(32): warning:  #1-D: last line of file ends without a newline
+  }
+delay.c: 1 warning, 0 errors
+compiling button.c...
+compiling lcd.c...
+compiling buzzer.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
+buzzer.c: 2 warnings, 0 errors
+compiling keypad.c...
+buzzer.h(7): warning:  #1-D: last line of file ends without a newline
+  void Buzzer_TOGGLE ();
+buzzer.h(7): warning:  #1295-D: Deprecated declaration Buzzer_TOGGLE - give arg types
+  void Buzzer_TOGGLE ();
+keypad.c: 2 warnings, 0 errors
 compiling main.c...
 buzzer.h(7): warning:  #1-D: last line of file ends without a newline
   void Buzzer_TOGGLE ();
@@ -31,26 +51,8 @@ main.c(61): warning:  #546-D: transfer of control bypasses initialization of:
                                 ^
 main.c: 9 warnings, 0 errors
 linking...
-Program Size: Code=4376 RO-data=924 RW-data=32 ZI-data=608  
-".\MicrowaveController.axf" - 0 Error(s), 9 Warning(s).
+Program Size: Code=4392 RO-data=924 RW-data=32 ZI-data=608  
+".\MicrowaveController.axf" - 0 Error(s), 14 Warning(s).
 </pre>
 </body>
 </html>
- RO-data=924 RW-data=32 ZI-data=608  
-".\MicrowaveController.axf" - 0 Error(s), 10 Warning(s).
-or - give arg types
-  void openDoor();
-main.c(28): warning:  #1295-D: Deprecated declaration pause - give arg types
-  void pause();
-main.c(29): warning:  #1295-D: Deprecated declaration done - give arg types
-  void done();
-main.c(30): warning:  #1295-D: Deprecated declaration reset - give arg types
-  void reset();
-main.c(61): warning:  #546-D: transfer of control bypasses initialization of:
-            variable "exit" (declared at line 105)
-                                switch (state){
-                                ^
-main.c: 9 warnings, 0 errors
-linking...
-Program Size: Code=4376 RO-data=924 RW-data=32 ZI-data=608  
-".\MicrowaveController.axf" - 0 Error(s), 15 Warning(s).

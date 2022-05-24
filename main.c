@@ -283,7 +283,9 @@ void done(){
 
 }
 void reset(){
-
+	LCD_VCLRScreen();
+	RGB_OFF();
+	SAME_PROG = false;
 }
 
 
