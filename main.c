@@ -13,6 +13,7 @@
 // Global variables
 enum states{Idle, SetWeight, SetTime, Cooking, PAUSE, DONE, RESET};
 int state;
+char weight;
 unsigned char prog;
 unsigned int number_of_seconds;
 bool SAME_PROG = true;
@@ -93,7 +94,41 @@ int main(){
 					
 					
 					case SetWeight:                             //SetWeight State
+				 
+					
+					while(keypad_getkey()==0xFF);
+					weight=keypad_getkey();     
+					if(!Is_ValidWeight(weight)){
+						Error_msg();
+						
+						if (prog == 'B'){
+							LCD_write_string("Beef weight?");
+						}
+
+						else if (prog == 'C'){
+							LCD_write_string("Chicken weight?");
+						}
+						
+						delay_s(2);
 						break;
+					}
+					
+					else{
+					LCD_VCLRScreen();
+					LCD_char(weight);
+					LCD_write_string(" Kg");
+					delay_s(1);
+					if (prog=='B'){
+						char w[] = {weight};
+						number_of_seconds = atoi(w)*30;
+					}
+					else if (prog=='C'){
+						char w[] = {weight};
+						number_of_seconds = atoi(w)*12; 
+					 } 
+					state=Cooking;
+					break;
+				 }
 					
 					case SetTime:                            //SetTime State
 						break;
