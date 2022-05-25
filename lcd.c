@@ -14,9 +14,9 @@ void LCD_char(unsigned char data){
 		GPIO_PORTB_DATA_R=data;
 
 	GPIO_PORTE_DATA_R=(HIGH<<1)|(LOW<<2)|(HIGH<<3);
-	delay_ms(1);
+	delay_us(30);
 	GPIO_PORTE_DATA_R=(HIGH<<1)|(LOW<<2)|(LOW<<3);
-	delay_ms(2);
+	delay_us(30);
 
 	return;
 }
@@ -80,7 +80,6 @@ void LCD_write_string(char  *s)
 		LCD_char(s[i]);
 		i++;
 	}
-	delay_us(1);
 
 	return;
 }
@@ -94,5 +93,4 @@ void LCD_goto_position(unsigned char  x,unsigned char  y)
 
 void LCD_VCLRScreen(){
 	LCD_cmd(Clear);
-	//delay_ms();
 }
