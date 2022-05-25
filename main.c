@@ -19,7 +19,7 @@ unsigned int number_of_seconds;
 bool SAME_PROG = true;
 
 void SysInit(void);
-bool Is_Programme(unsigned char chr);
+bool Is_Program(unsigned char chr);
 bool Is_Number(unsigned char chr);
 bool Is_ValidWeight (unsigned char chr);
 void Error_msg();
@@ -50,7 +50,7 @@ int main(){
 		prog = keypad_getkey();
 		delay_s(1);
 		
-		if(Is_Programme(prog)){                       //CHeck if it's A/B/C/D
+		if(Is_Program(prog)){                       //CHeck if it's A/B/C/D
 			
 			LCD_VCLRScreen();
 			LCD_char(prog);
@@ -207,7 +207,7 @@ void SysInit(){
 	Buzzer_VInit ();
 }
 
-bool Is_Programme(unsigned char chr){
+bool Is_Program(unsigned char chr){
 	if( (chr=='A')||(chr=='B')||(chr=='C')||(chr=='D')){
 		return true;}
 	else return false;
